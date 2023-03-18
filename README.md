@@ -256,7 +256,7 @@ BASIC
 ```
 Multiple output may apply:
 ```
-) PRINT "Hese is your data: ", D, " and an other value is ", V
+) PRINT "Here is your data: ", D, " and an other value is ", V
 ```
 
 ### PRINTL
