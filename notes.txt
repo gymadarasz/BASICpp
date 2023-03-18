@@ -1,0 +1,8 @@
+compile and run tests:
+$ g++ tests.cpp -o tests -O0 -g && printf "23\nasd\n23\nasd\n" | ./tests
+
+see the preprocessed macro free version:
+$ gcc -E tests.cpp > tests_preprocessed.cpp && unifdef tests_preprocessed.cpp > tests_macrofree.cpp
+
+compile and the examples:
+$ g++ example1.cpp -o example1 -O0 -g && ./example1
