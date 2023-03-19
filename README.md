@@ -11,7 +11,14 @@ int main()
 )      END
 ```
 
-## Intro
+## Table of Contents
+
+- [Intro](#intro)
+- [Usages](#usages)
+- [Outro](#outro)
+
+
+## Intro {#intro}
 
 First, and foremost. I made this BASIC stand-alone header file while I was bored on a rainy Sunday afternoon and It's not intended to be serious work. However, when I asked the most popular chatbot what it thinks about the BASIC macros in C/C++ and I shown a working example, it said:
 
@@ -23,7 +30,7 @@ Anyways, the reason why I spent a bit more time on writing this readme file is t
 
 Overall, a BASIC/C++ hybrid language has the potential to offer a more user-friendly and accessible approach to C/C++ programming while still retaining the power and versatility of the original languages.
 
-## Usages
+## Usages {#usages}
 Here I collected all the macro and its usages that are placed in the BASIC.h header file. You can see more examples in the tests.cpp
 If you are learning code and you could not find something here, you may consider checking the standard C/C++ specs and manuals.
 
@@ -215,7 +222,7 @@ BASIC
 ) END
 ```
 
-Multiple lines can be executed in a loop by placing the into a BEGIN..ENDWHILE block
+Multiple lines can be executed in a loop by placing into a BEGIN..ENDWHILE block
 ```
 ) LET I = 1
 ) WHILE I<30 DO BEGIN
@@ -299,7 +306,7 @@ BASIC
 ) END
 ```
 
-## Outro
+## Outro {#outro}
 So that's it folks for now. If I will have something to update this "doc" I will. Or maybe not. If you see anything that should be updated, I didn't. Please feel free to contribute in a GitHub issue or Pull Request.
 
 Oh, and useful commands are in the notes.txt. For e.g how you can turn your BASIC code back to C/C++ using gcc. Just in case you want to see what your BASIC program looks like in C.
