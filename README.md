@@ -11,6 +11,11 @@ int main()
 )      END
 ```
 
+![Debugger](debug-test.png)
+
+![Arduino](arduino-test.png)
+
+
 ## Table of Contents
 
 - [Intro](#intro)
