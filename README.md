@@ -15,6 +15,7 @@ int main()
 
 - [Intro](#intro)
 - [Usages](#usages)
+- [For Arduino People](#for-arduino-people)
 - [Outro](#outro)
 
 
@@ -304,6 +305,214 @@ BASIC
 ) INPUT S
 ) PRINT "Your message is ", S
 ) END
+```
+
+## For Arduino People
+
+The followings are Arduino platform specifics and you have to include the `BASIC_ino.h` file to get these work on your Arduino (or any compatible) board.
+
+Note: Some command is not ported but those can be used by combining the C++ call with the LET command, for e.g: `) LET n = Serial.available()` or simply referenced, for e.g: `) IF Serial.available() THEN ...`
+
+The full Arduino references won't be detaild here. This part here supposed to be a list of the ported Arduino functions and references only, always check out the original Arduino reference pages for more information.
+
+### SERIAL_BEGIN / SERIAL_END
+Same as: `Serial.begin()` and `Serial.end()`
+See more at Arduino reference.
+
+### SPI_BEGIN / SPI_END
+Same as: `SPI.begin()` and `SPI.end()`
+See more at Arduino reference.
+
+### WIRE_BEGIN / WIRE_END
+Same as: `Wire.begin()` and `Wire.end()`
+See more at Arduino reference.
+
+### KEYBRD_BEGIN / KEYBRD_END
+Same as: `Keyboard.begin()` and `Keyboard.end()`
+See more at Arduino reference.
+
+### MOUSE_BEGIN / MOUSE_END
+Same as: `Mouse.begin()` and `Mouse.end()`
+See more at Arduino reference.
+
+### DREAD
+Same as: `digitalRead()`
+See more at Arduino reference.
+Example:
+```
+) DREAD val, pin
+```
+
+### DWRITE
+Same as: `digitalWrite()`
+See more at Arduino reference.
+Example:
+```
+) DWRITE pin, val
+```
+
+### PINMODE
+Same as: `pinMode()`
+See more at Arduino reference.
+Example:
+```
+) PINMODE pin, mode
+```
+
+### AREAD
+Same as: `analogRead(pin)`
+See more at Arduino reference.
+Example:
+```
+) AREAD pin
+```
+
+### AREF
+Same as: `analogReference(...)`
+See more at Arduino reference.
+Example:
+```
+) AREF ...
+```
+
+### AWRITE
+Same as: `analogWrite(pin, val)`
+See more at Arduino reference.
+Example:
+```
+) AWRITE pin, val
+```
+
+### AREAD_RESO
+Same as: `analogReadResolution(bits)`
+See more at Arduino reference.
+Example:
+```
+) AREAD_RESO bits
+```
+
+### AWRITE_RESO
+Same as: `analogWriteResolution(bits)`
+See more at Arduino reference.
+Example:
+```
+) AWRITE_RESO bits
+```
+
+### NOTONE
+Same as: `noTone(pin)`
+See more at Arduino reference.
+Example:
+```
+) NOTONE pin
+```
+
+### PULSEIN
+Same as: `pulseIn(...)`
+See more at Arduino reference.
+Example:
+```
+) PULSEIN pin, value
+// or
+) PULSEIN pin, value, timeout
+```
+
+### PULSEIN_LONG
+Same as: `pulseInLong(...)`
+See more at Arduino reference.
+Example:
+```
+) PULSEIN_LONG pin, value
+// or
+) PULSEIN_LONG pin, value, timeout
+```
+
+### SHIFTIN
+Same as: `shiftIn(dataPin, clockPin, bitOrder)`
+See more at Arduino reference.
+Example:
+```
+) SHIFTIN incoming, dataPin, clockPin, bitOrder
+```
+
+### SHIFTOUT
+Same as: `shiftOut(dataPin, clockPin, bitOrder, value)`
+See more at Arduino reference.
+Example:
+```
+) SHIFTOUT dataPin, clockPin, bitOrder, value
+```
+
+### TONE
+Same as: `tone(...)`
+See more at Arduino reference.
+Example:
+```
+) TONE ...
+```
+
+### DELAY
+Same as: `delay(ms)`
+See more at Arduino reference.
+Example:
+```
+) DELAY ms
+```
+
+### DELAY_MICROS
+Same as: `delayMicroseconds(us)`
+See more at Arduino reference.
+Example:
+```
+) DELAY_MICROS us
+```
+
+### MICROS
+Same as: `micros()`
+See more at Arduino reference.
+Example:
+```
+) MICROS t
+```
+
+### MILLIS
+Same as: `millis()`
+See more at Arduino reference.
+Example:
+```
+) MILLIS t
+```
+
+### ATTACH_INTR
+Same as: `attachInterrupt(digitalPinToInterrupt(pin), ISR, mode)`
+See more at Arduino reference.
+Example:
+```
+) ATTACH_INTR pin, ISR, mode
+```
+
+### DETACH_INTR
+Same as: `detachInterrupt(digitalPinToInterrupt(pin))`
+See more at Arduino reference.
+Example:
+```
+) DETACH_INTR pin
+```
+
+### INTR
+Same as: `interrupts()`
+See more at Arduino reference.
+Example:
+```
+) INTR
+```
+
+### NOINTR
+Same as: `noInterrupts()`
+See more at Arduino reference.
+Example:
+```
+) NOINTR
 ```
 
 ## Outro
