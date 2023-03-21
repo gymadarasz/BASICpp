@@ -37,6 +37,9 @@ Anyways, the reason why I spent a bit more time on writing this readme file is t
 Overall, a BASIC/C++ hybrid language has the potential to offer a more user-friendly and accessible approach to C/C++ programming while still retaining the power and versatility of the original languages.
 
 ## Usages
+ - Download the `BASIC_min.h` and `BASIC.h` files (`BASIC_ino.h` for Arduino)
+ - Place them into your project and `#include "BASIC.h"` (or `#include "BASIC_ino.h"` if you are using Arduino)
+ 
 Here I collected all the macro and its usages that are placed in the BASIC.h header file. You can see more examples in the tests.cpp
 If you are learning code and you could not find something here, you may consider checking the standard C/C++ specs and manuals.
 
